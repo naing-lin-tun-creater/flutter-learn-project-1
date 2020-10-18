@@ -1,119 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_part_1/my_bmi.dart';
+import 'package:flutter_part_1/page1.dart';
+import 'package:flutter_part_1/part_16_image.dart';
+import 'package:flutter_part_1/part_17_listview.dart';
+import 'package:flutter_part_1/part_18_pageview.dart';
+import 'package:flutter_part_1/part_19_listview_exercise.dart';
+import 'package:flutter_part_1/part_20_and_21_player_app.dart';
+import 'package:flutter_part_1/part_23_login.dart';
 
+import 'my_home.dart';
 import 'my_widget.dart';
 
 void main(){
   runApp(
     MaterialApp(
-      home: MyHome()
-    )
+      // home: MyHome()
+    //   home: MyBMI(),
+    //      home: Part16Image(),
+    //   home: Part17ListView(),
+    //   home: Part18PageView(),
+    //   home: Part19ListViewExercise(),
+    //   home: Part2021PlayerApp(),
+    //   home: Page1(),
+      home: LoginPagePart23(),
+      theme: ThemeData(
+        primarySwatch: Colors.green
+      ),
+     )
   );
 }
 
-class MyHome extends StatefulWidget {
-
-  @override
-  _MyHomeState createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome> {
-  int count = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      //backgroundColor: Colors.blue[800],
-      appBar: AppBar(
-        title: Text("Counter"),
-      ),
-      
-      body: Container(
-        margin: EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-
-          Text(count.toString(),style: TextStyle(
-            fontSize: 40.0,
-            color: Colors.green
-          ),
-           textAlign: TextAlign.center,
-
-          ),
-            
-            RaisedButton(
-              onPressed: (){
-                setState(() {
-
-                });
-                count++;
-                print(count);
-              },
-              child: Text("Add"),
-            ),
-            
-            OutlineButton(
-                onPressed:(){
-                  setState(() {
-
-                  });
-                  count--;
-                  print(count);
-                },
-              // child: Text("Sub"),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.remove
-                  ),
-
-                  Text("Sub")
-                ],
-              ),
-            ),
-
-            FlatButton(
-              onPressed: (){
-                setState(() {
-                  count++;
-                });
-            },
-            child: Text("Add"),
-            ),
-
-            FloatingActionButton(
-              onPressed: (){
-                setState(() {
-
-                });
-                count++;
-                print(count);
-              },
-              child: Icon(Icons.add),
-            )
-
-
-
-          ],
-            ),
-            ),
-
-
-      floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            setState(() {
-              
-            });
-            count++;
-            print(count);
-          },
-          child: Icon(Icons.add),
-      ),
-      
-    );
-  }
-}
 
 //part one
 /*
@@ -884,6 +800,124 @@ class MyHome extends StatelessWidget {
 
         ],
       ),
+    );
+  }
+}
+
+ */
+
+
+//part 10 (button)
+  /*
+void main(){
+  runApp(
+    MaterialApp(
+      home: MyHome()
+    )
+  );
+}
+
+class MyHome extends StatefulWidget {
+
+  @override
+  _MyHomeState createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //backgroundColor: Colors.blue[800],
+      appBar: AppBar(
+        title: Text("Counter"),
+      ),
+
+      body: Container(
+        margin: EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+
+          Text(count.toString(),style: TextStyle(
+            fontSize: 40.0,
+            color: Colors.green
+          ),
+           textAlign: TextAlign.center,
+
+          ),
+
+            RaisedButton(
+              onPressed: (){
+                setState(() {
+
+                });
+                count++;
+                print(count);
+              },
+              child: Text("Add"),
+            ),
+
+            OutlineButton(
+                onPressed:(){
+                  setState(() {
+
+                  });
+                  count--;
+                  print(count);
+                },
+              // child: Text("Sub"),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.remove
+                  ),
+
+                  Text("Sub")
+                ],
+              ),
+            ),
+
+            FlatButton(
+              onPressed: (){
+                setState(() {
+                  count++;
+                });
+            },
+            child: Text("Add"),
+            ),
+
+            FloatingActionButton(
+              onPressed: (){
+                setState(() {
+
+                });
+                count++;
+                print(count);
+              },
+              child: Icon(Icons.add),
+            )
+
+
+
+          ],
+            ),
+            ),
+
+
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            setState(() {
+
+            });
+            count++;
+            print(count);
+          },
+          child: Icon(Icons.add),
+      ),
+
     );
   }
 }
