@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_part_1/part_24_register.dart';
 
 class LoginPagePart23 extends StatefulWidget {
   @override
@@ -59,7 +60,11 @@ class _LoginPagePart23State extends State<LoginPagePart23> {
                       // ignore: missing_return
                       validator: (str){
                         if(str.isEmpty){
-                          return "required";
+                          return "required password";
+                        }
+
+                        if(str.length<5){
+                          return "at least 5 character";
                         }
                       },
 
@@ -91,7 +96,10 @@ class _LoginPagePart23State extends State<LoginPagePart23> {
                       child: FlatButton(
                         textColor: Colors.blue,
                         onPressed: (){
-
+                          // ignore: missing_return
+                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                            return RegisterPart24();
+                          },));
                         },
                         child: Text("Register Here"),
                       ),
