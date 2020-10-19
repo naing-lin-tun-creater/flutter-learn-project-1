@@ -8,7 +8,9 @@ import 'package:flutter_part_1/part_19_listview_exercise.dart';
 import 'package:flutter_part_1/part_20_and_21_player_app.dart';
 import 'package:flutter_part_1/part_23_login.dart';
 import 'package:flutter_part_1/part_24_register.dart';
+import 'package:flutter_part_1/part_25_json_parse_1.dart';
 
+import 'main_page_26.dart';
 import 'my_home.dart';
 import 'my_widget.dart';
 
@@ -23,8 +25,10 @@ void main(){
     //   home: Part19ListViewExercise(),
     //   home: Part2021PlayerApp(),
     //   home: Page1(),
-        home: LoginPagePart23(),
+    //     home: LoginPagePart23(),
     //   home: RegisterPart24(),
+    //   home: Part25JsonParseOne(),
+      home:MainPage(),
       theme: ThemeData(
         primarySwatch: Colors.green
       ),
